@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 2 JavaScript</title>
+</head>
+
+<body>
+    <script>
+        var num1;
+        var num2;
+        //variable num1 y sus comprobaciones
+            num1= prompt("Dime un número");
+        
+            while(isNaN(num1)&&num1!="FIN"){
+            alert("Introduce números, por favor");
+            num1= prompt("Dime un número");
+                    }
+            if(num1=="FIN"){
+                num2="";
+            }
+    
+            
+
+        // variable num2 y sus comprobaciones
+        if(num2!=""){
+            num2= prompt("Dime otro número");
+        while(isNaN(num2)&&num2!="FIN"){
+            alert("Introduce números, por favor");
+            num2= prompt("Dime un número");
+                    }
+        }
+            
+            
+        var numero1=Number(num1);
+        var numero2=Number(num2);
+
+        if (numero1<numero2){
+            if (numero2>20){
+                document.write("<h1>El número "+num2+" es el mayor de los 3</h1>");
+            }else{
+                document.write('<h1>El número 20 es el mayor de los 3</h1>');
+            }
+        }else{
+            if (numero1>20){
+                document.write("<h1>El número "+num1+" es el mayor de los 3</h1>");
+            }else{
+                document.write('<h1>El número 20 es el mayor de los 3</h1>');
+            }
+       }  
+
+       document.write(typeof(num1)+"<br>");
+       document.write(typeof(num2)+"<br>");
+       document.write(typeof(numero1)+"<br>");
+       document.write(typeof(numero2)+"<br>");
+       </script>
+
+       
+</body>
+
+</html>

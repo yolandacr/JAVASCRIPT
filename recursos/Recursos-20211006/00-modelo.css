@@ -1,0 +1,175 @@
+/*
+lenguaje: CSS
+web o pagina:
+entorno: 
+autor: Prof. Carlos Boni
+fecha: Agosto 2021
+RECORDAR:
+en caso de conflictos se aplica el estilo que se define último,
+o sea al final de este archivo o en la misma pagina html
+
+Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
+
+*/
+
+:root {
+  --azulclaro: #e6f2ff; /* Azul al 10% */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback; /* permite visualizar el contenido con fuente alternativa si aun no se ha cargado */
+  src: url('../recursos/montserrat-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/recursos/montserrat-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/recursos/montserrat-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/recursos/montserrat-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/recursos/montserrat-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/recursos/montserrat-v18-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* exo-2-500 - latin */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback; /* permite visualizar el contenido con fuente alternativa si aun no se ha cargado */
+  src: url('../recursos/exo-2-v10-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/recursos/exo-2-v10-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/recursos/exo-2-v10-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/recursos/exo-2-v10-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('/recursos/exo-2-v10-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/recursos/exo-2-v10-latin-500.svg#Exo2') format('svg'); /* Legacy iOS */
+}
+
+* {
+  /* facilita el calculo responsive para TODOS los elementos de la página; */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+}
+
+body {
+  text-transform:none;
+  margin:0px;
+  padding:0px;
+  font-size: calc(10px + 0.75vw); /* ajuste de tamaño de fuente responsive */
+  box-sizing:border-box;
+  background-attachment: fixed;
+  background-color:var(--azulclaro);
+  background-image: url("/multimedia/imgenFondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  resize: both;
+  /* el contenido ocupa todo el alto del area de visualizacion disponible sin barras laterales */
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Ejemplo de personalización de selectores del framework W3.CSS */
+
+.w3-third img:hover, .w3-half img:hover {
+    opacity: 1;
+    border:0.1px solid var(--textoamarillo);
+    box-shadow: 0px 0px 6px var(--textoamarillo);
+    /* border:1px solid var(--destacado);
+    box-shadow: 2px 2px 6px var(--destacado); */
+}
+
+.w3-third img, .w3-half img {
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.75;
+    cursor: pointer;
+    object-fit:cover;
+    height:30vh;
+    width:100%;
+    object-position:bottom;
+    /* filter: grayscale(100%); */
+    box-shadow: 2px 2px 6px black;
+}
+
+
+/* A PARTIR DE AQUÍ UNA AYUDA DE ELEMENTOS Y SELECTORES DISPONIBLES */
+
+div {
+  /* estilos para todos los elementos <div>; */
+  /* estilo:valor; */
+  
+  /* box-sizing:border-box  incluye en las dimensiones de un elemento el espacio del padding y del border. */
+  /* display:flex   da la misma altura a todos los elementos que están en el mismo DIV */
+}
+
+.claseUno {
+  /* estilos para todos los elementos que son de la clase .claseUno; */
+  /* estilo:valor; */
+}
+
+.claseUno.claseDos {
+  /* estilos para todos los elementos que son de la clase .claseUno y .claseDos;
+     NO hay espacio entre ambos selectores  */
+  /* estilo:valor; */
+}
+
+.claseUno .claseDos {
+  /* estilos para todos los elementos de .claseDos que descienden de uno de .claseUno;
+     HAY UN espacio entre ambos selectores  */
+  /* estilo:valor; */
+}
+
+#esteElemento {
+  /* estilos para el único elemento identificado con este #esteElemento; */
+  /* estilo:valor; */
+}
+
+p.claseUno {
+  /* estilos para todos los elementos <p> que son de la clase .claseUno; */
+  /* estilo:valor; */
+}
+
+p,div {
+  /* estilos para todos los elementos que sean <p> o <div>; */
+  /* estilo:valor; */
+}
+
+div > p {
+  /* estilos para todos los elementos que sean <p> que estén dentro (sean hijos de) un <div>; */
+  /* estilo:valor; */
+}
+
+h1 + p {
+  /* estilos para todos los elementos que sean <p> que sean hermanos y estén inmediantamente después de <h1>; */
+  /* estilo:valor; */
+}
+
+/*
+
+pseudoclases, asignarles estilos en este orden llamado LVHA:
+   :link — :visited — :hover — :active.
+   
+Más selectores y documentación:
+pseudo-clases: https://www.w3schools.com/css/css_pseudo_classes.asp
+pseudo-elementos: https://www.w3schools.com/css/css_pseudo_elements.asp
+pseudo-atributos: https://www.w3schools.com/css/css_attribute_selectors.asp
+formularios: https://www.w3schools.com/css/css_form.asp
+posicionamiento: https://www.w3schools.com/css/css_positioning.asp
+selectores: https://www.w3schools.com/cssref/css_selectors.asp
+*/
+
+
+
+
+

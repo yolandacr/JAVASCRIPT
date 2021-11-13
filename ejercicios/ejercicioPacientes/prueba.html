@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio pacientes</title>
+    <meta charset="utf-8">
+    </head>
+<body>
+
+    <form>
+        Nombre: <input type="text" name="nombre" id="nombre" required>
+        <br><br>
+        Edad: <input type="number" min= "1" max="100" name="edad" id="edad" required>
+        <br><br>
+        Fecha de Alta: <input type="date"; name="fecha" id="fecha" required>
+        <br><br>
+        <button nombre="añadir" id="añadir" onclick="insertaPaciente()">Añadir Paciente</button>
+        <button nombre="medico" id="medico" onclick="insertaMedico()">Añadir Paciente</button>
+        <button nombre="alta" id="alta" onclick="borraPaciente()">Dar Alta</button>
+    </form>
+        <script type="text/javascript">
+
+
+// método constructor
+      function Paciente (nombre,edad,fecha) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.fecha = fecha;
+}
+
+// función que crea un paciente con lo introducido por los campos input
+      function insertaPaciente(){
+          let nombre = document.getElementById("nombre").value;
+          let edad = document.getElementById("edad").value
+          let fecha = document.getElementById("fecha").value
+          let iniciales="";
+
+
+        //arrays con los datos de los pacientes version nombre completo
+        var pacientes =[];
+        var pacientesAlta =[];
+        var medicos = [];
+
+          //version sin iniciales
+          var paciente1 = pacientes.push(new Paciente (nombre,edad,fecha));
+          document.write(paciente1.nombre+"<br>"+paciente1.edad+"<br>"+paciente1.fecha);
+		  
+		  //versión con iniciales
+
+          for (let i = 0; i < nombre.length; i++) {
+              if(i==0){
+                iniciales= nombre.charAt(i);
+              }
+              if (nombre.charAt(i)==' '){
+               iniciales+= "."+nombre.charAt(i+1);
+               break;
+              } 
+  
+          }
+           
+           
+           
+           var paciente2 = new Paciente (iniciales,edad,fecha) ;
+           
+        document.write("<br><br>"+paciente2.nombre+"<br>"+paciente2.edad+"<br>"+paciente2.fecha);
+
+      
+        
+
+          
+      }
+
+
+        
+      
+
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+Ejercicio de Ejemplo
+DWEC-UD2
+autor: Carlos Boni
+fecha: Agosto 2021
+ENUNCIADO:
+  Ir gradualmente mejorando, paso a paso, hasta llegar
+  donde mejor puedan o quieran. Lo importante es
+  superarse a ustedes mismos, e intentar ser el mejor si
+  se animan...
+  Iremos añadiendo elementos durante la clase.
+  INICIAL: crear el botón con leyenda COMENZAR que al
+  pincharlo pone en cada caja el mensaje: "cola: vacía"
+
+-->
+
+<head>
+  <title>Ejercicios Javascript</title>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --fondoweb: white;
+      --fondozonaboton: lightblue;
+      --fondozonacajas: lightpink;
+      --fondocajas: red;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0pt;
+      padding: 5pt;
+    }
+
+    body {
+      background-color: var(--fondoweb);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    p {
+      font-size: calc(8px + 0.5vw + 0.5vh);
+    }
+
+    h1 {
+      font-size: calc(16px + 0.5vw + 0.5vh);
+    }
+
+    #zonacabecera {
+      background-color: transparent;
+      height: 5vh;
+    }
+
+
+    #zonacajas {
+      background-color: var(--fondozonacajas);
+      width: 35%;
+      height: 70vh;
+      overflow: hidden;
+      margin: 0vh 1vw 5vh 1vw;
+    }
+
+    .caja {
+      background-color: green;
+      border-style: solid;
+      border-width: 1%;
+      border-color: white;
+      margin: 4%;
+      width: 90%;
+      height: 22%;
+      /* visibility:hidden; */
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div id="zonacabecera">
+    <h1>SUPERMERCADO</h1>
+  </div>
+  <br>
+  <div id="zonacajas">
+    <div class="caja" type="button" id="caja1" >
+      <p>CAJA1</p>
+    </div>
+    <div class="caja" type="button" id="caja2" >
+      <p>CAJA2</p>
+    </div>
+    <div class="caja" type="button" id="caja3" >
+      <p>CAJA3</p>
+    </div>
+    <div class="caja" type="button" id="caja1" >
+      <p>CAJA4</p>
+    </div>
+  </div>
+
+  <script>
+
+    let cuenta = 0; //lo usaremos para estadistica diaria más adelante
+    let cola = 0;
+    let libre = true;
+
+
+    // método constructor de objetos caja
+    function Caja (objeto,libre,cola,cuenta) {
+            this.objeto = objeto;
+            this.libre = libre;
+            this.cola = cola;
+}
+
+//creamos los objetos de las 4 cajas y los metemos en un array para que quede más ordenado, con todos sus atributos.
+var cajas = [];
+
+
+var caja1= cajas.push(new Caja(document.getElementById("caja1"),libre,cola,cuenta));
+var caja2= cajas.push(new Caja(document.getElementById("caja2"),libre,cola,cuenta));
+var caja3= cajas.push(new Caja(document.getElementById("caja3"),libre,cola,cuenta));
+var caja4= cajas.push(new Caja(document.getElementById("caja4"),libre,cola,cuenta));
+
+//pone a todos los divs en escucha a la espera de que se clickee en ellos
+for (let i = 0; i < cajas.length; i++) {
+  cajas[i].objeto.addEventListener("click",atender(cajas[i]),false);
+}
+
+    function atender(cajaPulsada){
+      cajaPulsada.cuenta += 1;
+      // var inicio=new Date();
+      if (cajaPulsada.libre == true) {
+        libre = false;
+        cajaPulsada.objeto.style.backgroundColor('RED');
+      } else {
+        cajaPulsada.cola += 1
+      }
+
+      if(cajaPulsada.cola==4){
+       /*  var fin=new Date(); // (lo haremos al llegar la 4ta persona a la cola)
+        tiempoTranscurrido = (fin-inicio)/1000; //en milisegundos */
+        window.alert("Hay 4 personas en cola. Han pasado "+tiempoTranscurrido+" segundos.");
+      }
+
+    }
+
+
+    
+  </script>
+
+</body>
+
+</html>

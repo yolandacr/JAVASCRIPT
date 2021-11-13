@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 2.B JavaScript</title>
+</head>
+
+<!-- Todos los pasos están contenidos en el siguiente ejercicio, modificando los últimos pasos a los primeros -->
+
+<body>
+    <form>
+        <p>Dime un nº múltiplo de 3 <input type="number" step="3" min="3" id="num1"></p>  <!--PASO 2 AÑADIR EL TYPE CORRECTO -->
+        <p>Dime otro nº múltiplo de 3 <input type="number" step="3" min="3" id="num2"></p>
+        <p><input type="submit" value="Enviar" id="boton" onClick= "compruebaMayor()";></p>
+    </form>
+
+    <script>
+      
+      var objeto1= document.getElementById("num1");
+      var objeto2= document.getElementById("num2");
+
+        
+
+        
+
+       function compruebaMayor(){
+        let num1 = parseInt(objeto1.value);
+        let num2 = parseInt(objeto2.value);
+
+        if(num1%3!=0||num2%3!=0){ /*PASO 4 LIMITAR LA ENTRADA DE NÚMEROS PARA QUE SEAN MÚLTIPLOS DE 3*/
+         window.alert("El número introducido ha de ser múltiplo de 3");
+        }
+        else{ /*PASO 3. AÑADIR PROMPT SI LOS DOS NÚMEROS SON IGUALES*/
+            if(num1==num2){
+            prompt("Los dos números introducidos son iguales","Poh valeh");
+        }else{
+            if(num1>num2&&num1>20){
+            document.write("<h1>El número "+num1+" es el mayor</h1>");
+        }
+        else if(num2>num1&&num2>20){
+            document.write("<h1>El número "+num2+" es el mayor</h1>");
+        }
+        else{
+            document.write('<h1>El número 20 es el mayor</h1>');
+        }
+        }
+        }
+       }
+
+       /*Paso 5- Respuesta: Yo diría que no es posible hacer lo mismo que en el paso anterior puesto que HTML no es
+       un lenguaje de programación, es un lenguaje de marcas que sirve únicamente para dar estructura a una página web. Por lo tanto
+	   se podría limitar la entrada de números a múltiplos de 3 (step="3) pero la parte del prompt con html es imposible*/
+           
+        
+    </script>
+
+       
+</body>
+
+</html>

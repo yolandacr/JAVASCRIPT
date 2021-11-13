@@ -1,0 +1,57 @@
+:root {
+    --fondoweb: white;
+    --fondozonaboton: lightblue;
+    --fondozonacajas: lightpink;
+    --fondocajas: red;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0pt;
+    padding: 5pt;
+  }
+
+  body {
+    background-color: var(--fondoweb);
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  p {
+    font-size: calc(8px + 0.5vw + 0.5vh);
+  }
+
+  h1 {
+    font-size: calc(16px + 0.5vw + 0.5vh);
+  }
+
+  #zonacabecera {
+    background-color: transparent;
+    height: 5vh;
+  }
+
+  #zonaboton {
+    background-color: var(--fondozonaboton);
+    width: 25%;
+    height: 10vh;
+    margin: 5vh 1vw 5vh 1vw;
+  }
+
+  #zonacajas {
+    background-color: var(--fondozonacajas);
+    width: 35%;
+    height: 70vh;
+    overflow: hidden;
+    margin: 0vh 1vw 5vh 1vw;
+  }
+
+  .caja {
+    background-color: green;
+    border-style: solid;
+    border-width: 1%;
+    border-color: white;
+    margin: 4%;
+    width: 90%;
+    height: 22%;
+    /* visibility:hidden; */
+  }
