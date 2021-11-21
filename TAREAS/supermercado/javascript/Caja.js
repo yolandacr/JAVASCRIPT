@@ -23,6 +23,7 @@ class Caja {
       this.inicio = new Date();
       this.cuenta = this.cuenta + 1;
     } else {
+      this.elemento.style.backgroundColor = "BLUE";
       this.cola = this.cola + 1;
     }
 
@@ -40,13 +41,13 @@ class Caja {
     if (this.cola > 0) {
       this.cola = this.cola - 1;
       if (this.cola <= 3) {
-        this.elemento.style.backgroundColor = "GREEN";
+        this.elemento.style.backgroundColor = "BLUE";
       }
     }
 
     if (this.cola == 0) {
       this.libre=true;
-      this.elemento.style.backgroundColor = "TRANSPARENT";
+      this.elemento.style.backgroundColor = "GREEN";
       alert("No hay clientes en cola.");
     }
 
