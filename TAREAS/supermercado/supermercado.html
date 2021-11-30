@@ -14,6 +14,31 @@
   </head>
 
   <body onload="crearCajas()">
+    <div id="fondo">
+      <picture>
+
+         <!-- IMAGEN GRANDE -->
+        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./imagenes/grande.webp"
+            type="image/webp">
+
+            <source media="(orientation: portrait) and (min-width:601px)" srcset="./imagenes/grande_vertical.jpg" type="image/jpg">
+
+            <!-- IMAGEN MEDIANA  -->
+            <source media="(orientation: landscape) and (min-width: 901px)" srcset="./imagenes/mediana.webp"
+            type="image/webp">
+
+            <source media="(orientation: portrait) and (min-width:401px)" srcset="./imagenes/mediana_vertical.jpg" type="image/jpg">
+<!-- 
+             IMAGEN PEQUEÑA -->
+            <source media="(orientation: landscape) and (max-width: 900px)" srcset="./imagenes/pequeña.jpg" type="image/jpg">
+            <source media="(orientation: portrait) and (max-width: 400px)" srcset="./imagenes/pequeña_vertical.webp" type="image/webp">
+
+            <img id="imagen" alt="Foto de Supermercado" title="supermercado" src="./imagenes/grande.webp" />
+
+
+      </picture>
+      
+    </div>
     <div id="zonacabecera">
       <h1>SUPERMERCADO</h1>
     </div>
@@ -41,5 +66,6 @@
     </div>
     <script src="./javascript/Caja.js"></script>
     <script src="./javascript/Funciones.js"></script>
+  
   </body>
 </html>
