@@ -17,7 +17,10 @@ class Caja {
   }
 
   atender() {
+   
+
     if (this.libre == true) {
+      play('sonidos/mercadona.wav');
       this.libre = false;
       this.elemento.style.backgroundColor = "GREEN";
       this.inicio = new Date();
@@ -28,27 +31,46 @@ class Caja {
     }
 
     if (this.cola == 4) {
+      play('sonidos/colarse.wav');
       this.elemento.style.backgroundColor = "RED";
       this.fin = new Date();
       window.alert(
         "Hay 4 personas en la cola. Han pasado " +
-          (this.fin - this.inicio) / 1000 +" segundos."
+          (this.fin - this.inicio) / 1000 +
+          " segundos."
       );
     }
   }
 
+  cambiarColor() {
+    if (this.cola > 0 && this.cola < 4) {
+      this.elemento.style.backgroundColor = "BLUE";
+    } else if (this.cola == 0) {
+      this.elemento.style.backgroundColor = "GREEN";
+    } else if (this.cola == 4) {
+      this.elemento.style.backgroundColor = "RED";
+    } else {
+      this.elemento.style.backgroundColor = "TRANSPARENT";
+    }
+  }
+
+  
+
   desatender() {
-    if (this.cola > 0) {
+    if (this.cola >= 0) {
+      play('sonidos/caja.mp3');
       this.cola = this.cola - 1;
-      if (this.cola <= 3) {
-        this.elemento.style.backgroundColor = "BLUE";
-      }
+      this.cambiarColor();
     }
 
     if (this.cola == 0) {
-      this.libre=true;
-      this.elemento.style.backgroundColor = "GREEN";
+      this.libre = true;
       alert("No hay clientes en cola.");
+      this.cambiarColor();
+    }
+    if (this.cola == -1) {
+      alert("Caja cerrada");
+      this.cambiarColor();
     }
 
     console.log(
@@ -56,15 +78,11 @@ class Caja {
     );
   }
 
+  
+
   //método getter para la cola
 
   get getCola() {
     return this.cola;
-  }
-
-  //método setter para la cola
-
-  set setCola(value) {
-    this.cola = value;
   }
 }

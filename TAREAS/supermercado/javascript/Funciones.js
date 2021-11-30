@@ -130,17 +130,47 @@ function validar() {
       console.log("Elige una operación");
   }
 
- 
- function mensaje(resultado){
-  if (resultado < 0) {
-    console.log(
-      "No hay suficientes clientes en cola. Elige un nº menor o prueba a sumar"
-    );
-  } else if (resultado > 4) {
-    console.log("Demasiados clientes. Elige un nº menor o prueba a restar");
-  } else {
-    console.log("La operación puede realizarse. Quedarían "+resul+" clientes en cola.");
+  function mensaje(resultado) {
+    if (resultado < 0) {
+      console.log(
+        "No hay suficientes clientes en cola. Elige un nº menor o prueba a sumar"
+      );
+    } else if (resultado > 4) {
+      console.log("Demasiados clientes. Elige un nº menor o prueba a restar");
+    } else {
+      console.log(
+        "La operación puede realizarse. Quedarían " +
+          resul +
+          " clientes en cola."
+      );
+    }
   }
- };
-  
+}
+
+function guardarEstado() {
+  let cajasJSON = JSON.stringify(cajas);
+
+  //convierto mi array en json
+  var guarda = localStorage.setItem("caja", JSON.stringify(cajas));
+
+  //lo guardo en el local localStorage
+
+  localStorage.setItem("caja", cajasJSON);
+}
+
+function recuperarEstado() {
+  if (JSON.parse(localStorage.getItem("caja") == null)) {
+    alert("No hay estados guardados");
+  } else {
+    cajas = JSON.parse(localStorage.getItem("caja"));
+
+    for (let i = 0; i < cajas.length; i++) {
+      console.log(cajas[i]);
+    }
+  }
+}
+
+function play(audio) {
+  const music = new Audio(audio);
+  music.play();
 }

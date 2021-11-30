@@ -32,7 +32,12 @@
         <p>CAJA4</p>
       </div>
       <input type="text" id="orden">
-      <input type="submit" id="enviar" onclick="validar()">
+      <input type="button" id="enviar" value="Enviar" onclick="validar()">
+      <div id="botonesEstado">
+        <input type="button" id="guardar" value="Guardar" onclick="guardarEstado()">
+      <input type="button" id="recuperar" value="Recuperar" onclick="recuperarEstado()">
+      </div>
+      
     </div>
     <script src="./javascript/Caja.js"></script>
     <script src="./javascript/Funciones.js"></script>
