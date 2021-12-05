@@ -147,6 +147,11 @@
         max-width: 1920px;
         max-height: 1280px;
     }
+
+    body{
+    overflow-y: auto;
+    overflow-x:hidden;
+    }
 }
 
 @media screen and (orientation:portrait) {
