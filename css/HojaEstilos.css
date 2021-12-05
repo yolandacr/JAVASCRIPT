@@ -146,7 +146,7 @@
     
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (orientation:portrait) {
   #botonesEstado {
 
    font-size: calc(1em + 1vw)
@@ -154,7 +154,7 @@
   }
 
   #zonacajas {
-   height:90%;
+   height:70%;
   }
 }
 }
