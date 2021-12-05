@@ -169,9 +169,6 @@
     
 }
 
-#enviar{
-  width:50%;
-}
 
 #enviar{
   width:50%;
@@ -183,17 +180,9 @@
 }
 
 #consola{
-  width: 85%;
   margin-top: 10%;
-  text-align: center;
-    background-color: white;
-    border-color: black;
-    border-style: solid;
-    border-width: 1%;
-    height:25%;
-    margin: auto;
-    overflow-y: auto;
-    overflow-x:hidden;
+  height:25%;
+
 }
 
 #orden{
