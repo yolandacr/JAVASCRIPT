@@ -148,15 +148,13 @@
 
 @media screen and (max-width: 480px) {
   #botonesEstado {
-   height:auto;
-   width:80%;
-   font-size: calc(16px + 0.5vw + 0.5vh);
+
+   font-size: calc(1em + 1vw)
    
   }
 
   #zonacajas {
-    width:70%;
-    height:80%;
+    font-size: calc(1em + 1vw)
   }
 }
 }
