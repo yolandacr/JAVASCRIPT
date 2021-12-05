@@ -30,16 +30,9 @@
     text-align: center;
   }
 
-    #zonacabecera {
+  #zonacabecera {
     background-color: transparent;
-    height: 15vh;
-    text-align: center;
-    margin-bottom:2%;
-  }
-
-  #logo{
-    width: 30%;
-    height:auto;
+    height: 5vh;
   }
 
   #zonaboton {
