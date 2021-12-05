@@ -40,8 +40,6 @@ function abrirCaja(idCaja) {
   }
 }
 
-
-
 //funcion para llamar al método de clase restar.
 function restar(numCaja) {
   if (cajas.length != 0) {
@@ -73,16 +71,15 @@ function restar(numCaja) {
 //función para validar la orden y ver si se puede realizar la operación.
 function validar() {
   var orden = document.getElementById("orden").value;
-  orden=orden.toLowerCase();
-
- 
-  var regex = /^(caja){1}(\s)?[1-4]{1}:(\s)?([+-])?[1-4]{1}$/;
-  
+  var regex = /^(Caja){1}||(caja){1}(\ )?[1-4]{1}:(\ )?([+-])?[1-4]{1}$/;
 
   if (regex.test(orden)) {
     console.log(orden + " es un mensaje válido.");
+  } else {
+    console.log(orden + " es un mensaje inválido.");
+  }
 
-    var cola = 0;
+  var cola = 0;
   if (
     orden.includes("Caja 1") ||
     orden.includes("Caja1") ||
@@ -132,18 +129,8 @@ function validar() {
     default:
       console.log("Elige una operación");
   }
-  } else {
-    console.log(orden + " es un mensaje inválido.");
-  }
-
-  
 
   function mensaje(resultado) {
-
-    
-    var lastDigit = resultado.toString().slice(-1);
-
-
     if (resultado < 0) {
       console.log(
         "No hay suficientes clientes en cola. Elige un nº menor o prueba a sumar"
@@ -153,7 +140,7 @@ function validar() {
     } else {
       console.log(
         "La operación puede realizarse. Quedarían " +
-        lastDigit +
+          resul +
           " clientes en cola."
       );
     }
@@ -172,46 +159,16 @@ function guardarEstado() {
 }
 
 function recuperarEstado() {
-  var resul=0;
   if (JSON.parse(localStorage.getItem("caja") == null)) {
     alert("No hay estados guardados");
   } else {
     cajas = JSON.parse(localStorage.getItem("caja"));
 
-
-    //comprueba el estado del array de cajas
-    /* for (let i = 0; i < cajas.length; i++) {
+    for (let i = 0; i < cajas.length; i++) {
       console.log(cajas[i]);
-    } */
-    cambiarColor();
     }
   }
-
-
-  function cambiarColor(){
-    for (let i = 0; i < cajas.length; i++) {
-      var resul= (cajas[i].getCola);  //obtenemos el tamaño de la cola y segun sea le modificamos el color
-      var elementoCambio=cajas[i].getElemento;  //obtenemos el elemento con id de cada 
-      
-      console.log(elementoCambio);
-
-   /*    if (resul >=1 && resul <=3) {
-      elementoCambio.style.backgroundColor = "BLUE";
-    } else if (resul == 0) {
-      elementoCambio.style.backgroundColor = "GREEN";
-    } else if (resul == 4) {
-      elementoCambio.style.backgroundColor = "RED";
-    } else {
-      elementoCambio.style.backgroundColor = "TRANSPARENT";
-    }  */
-     }
-  }
-
-
-
-
-
-//funcion que reproduce el audio al pulsar
+}
 
 function play(audio) {
   const music = new Audio(audio);
