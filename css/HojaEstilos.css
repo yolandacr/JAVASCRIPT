@@ -154,7 +154,7 @@
   }
 
   #zonacajas {
-    font-size: calc(1em + 1vw)
+   height:90%;
   }
 }
 }
