@@ -148,8 +148,7 @@
 
 @media screen and (max-width: 480px) {
   #inner {
-    width: 100vw;
-    height: 100vh;
+    font-size: calc(8px + 0.5vw + 0.5vh);
   }
 }
  
