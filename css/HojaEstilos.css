@@ -72,7 +72,7 @@
   }
 
   #orden{
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.5em + 0.5vw);
     height:10%;
     width:40%;
     margin: 4%;
@@ -147,6 +147,18 @@
 
 #enviar{
   width:50%;
+}
+
+#enviar{
+  width:50%;
+}
+
+.botonEstado{
+  width:60%;
+}
+
+#orden{
+  height: 5%;
 }
 
 }
