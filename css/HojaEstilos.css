@@ -95,6 +95,7 @@
   }
 
   .botonEstado{
+    display: inline-block;
     font-size: 0.8vw;
     font-weight: bold;
     padding: 1%;
