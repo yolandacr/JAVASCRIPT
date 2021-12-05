@@ -80,7 +80,7 @@
   }
 
   #enviar{
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.5em + 0.5vw);
     font-weight: bold;
     height:10%;
     width:20%;
@@ -96,7 +96,7 @@
   }
 
   .botonEstado{
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.5em + 0.5vw);
     font-weight: bold;
     padding: 1%;
     width: 30%;
