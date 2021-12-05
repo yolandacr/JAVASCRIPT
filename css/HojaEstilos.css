@@ -87,6 +87,10 @@
     margin:auto;
   }
 
+  #container{
+    height:80%;
+  }
+
   #botonesEstado{
     margin-bottom: 2%;
     width:100%;
@@ -183,10 +187,13 @@
   width:80%;
 }
 
+#container{
+  height:25%;
+}
+
 #consola{
   margin-top: 10%;
   height:25%;
-
 }
 
 #orden{
