@@ -17,6 +17,18 @@ class Caja {
     this.fin = null;
   }
 
+  cambiarColor(){
+       if (this.cola >=1 && this.cola<=3) {
+      this.elemento.style.backgroundColor = "BLUE";
+    } else if (this.cola == 0) {
+      this.elemento.style.backgroundColor = "GREEN";
+    } else if (this.cola == 4) {
+      this.elemento.style.backgroundColor = "RED";
+    } else {
+      this.elemento.style.backgroundColor = "TRANSPARENT";
+    }  
+  }
+
   atender() {
    
 
@@ -55,19 +67,7 @@ class Caja {
     }
   }
 
-  cambiarColor() {
-    if (this.cola > 0 && this.cola < 4) {
-      this.elemento.style.backgroundColor = "BLUE";
-    } else if (this.cola == 0) {
-      this.elemento.style.backgroundColor = "GREEN";
-    } else if (this.cola == 4) {
-      this.elemento.style.backgroundColor = "RED";
-    } else {
-      this.elemento.style.backgroundColor = "TRANSPARENT";
-    }
-  }
-
-  
+ 
 
   desatender() {
     contador=0;
@@ -99,4 +99,13 @@ class Caja {
   get getCola() {
     return this.cola;
   }
+
+  //método getter para elemento
+
+  get getElemento() {
+    return this.elemento;
+  }
+
+
+
 }
