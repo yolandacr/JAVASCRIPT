@@ -92,13 +92,16 @@
     margin-bottom: 2%;
     width:100%;
     text-align: center;
+    display: inline-block;
+    
   }
 
   .botonEstado{
-    display: inline-block;
-    font-size: 0.8vw;
+    font-size: 1vw;
     font-weight: bold;
     padding: 1%;
+    width: 30%;
+    height: auto;
   }
 
   #fondo{
