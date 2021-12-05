@@ -6,6 +6,7 @@ function crearCajas() {
   cajas.push(new Caja(document.getElementById("caja4")));
 }
 
+
 //según el valor que se le pase por parámetros abre una caja u otra y cambia sus propiedades a este nuevo estado
 function abrirCaja(idCaja) {
   switch (idCaja) {
@@ -80,7 +81,7 @@ function validar() {
   
 
   if (regex.test(orden)) {
-    console.log(orden + " es un mensaje válido.");
+    $("#consola").innerHTML = console.log(orden + " es un mensaje válido.");
 
     var cola = 0;
   if (
@@ -113,7 +114,7 @@ function validar() {
     cola = cajas[3].getCola;
   }
 
-  //hasta aqui funciona
+  
   var ultimoChar = orden.charAt(orden.length - 1);
   var operacion = orden.charAt(orden.length - 2);
   var resul = 0;
