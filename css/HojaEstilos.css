@@ -99,7 +99,7 @@
     font-size: calc(0.5em + 0.5vw);
     font-weight: bold;
     padding: 1%;
-    width: 30%;
+    width:  calc(0.5em + 0.5vw);
     height: auto;
   }
 
