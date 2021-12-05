@@ -147,9 +147,10 @@
 }
 
 @media screen and (max-width: 480px) {
-  #zonaCajas {
-    width: 60vw;
-    height: 70vh;
+  #botonesEstado {
+   height:auto;
+   width:20%;
+   font-size:1rem;
   }
 }
  
