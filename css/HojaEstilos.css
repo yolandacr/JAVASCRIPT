@@ -172,7 +172,7 @@
 #consola{
   width: 85%;
   height:auto;
-  margin-top: 4%;
+  margin-top: 10%;
   text-align: center;
     background-color: white;
     border-color: black;
@@ -195,7 +195,11 @@
 
 #botonesEstado{
   height:15%;
-  margin-top: 30%;
+  margin-top: 60%;
+}
+
+#grupocajas{
+  margin-top:15%;
 }
 
 }

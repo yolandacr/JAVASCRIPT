@@ -51,21 +51,23 @@
     </div>
     <br />
     <div id="zonacajas">
-      <div class="caja" type="button" id="caja1" onClick="abrirCaja(1)" oncontextmenu="restar(1)">
-        <p>CAJA1</p>
-      </div>
-      <div class="caja" type="button" id="caja2" onClick="abrirCaja(2)" oncontextmenu="restar(2)">
-        <p>CAJA2</p>
-      </div>
-      <div class="caja" type="button" id="caja3" onClick="abrirCaja(3)" oncontextmenu="restar(3)">
-        <p>CAJA3</p>
-      </div>
-      <div class="caja" type="button" id="caja4" onClick="abrirCaja(4)" oncontextmenu="restar(4)">
-        <p>CAJA4</p>
+      <div id="grupocajas">
+        <div class="caja" type="button" id="caja1" onClick="abrirCaja(1)" oncontextmenu="restar(1)">
+          <p>CAJA1</p>
+        </div>
+        <div class="caja" type="button" id="caja2" onClick="abrirCaja(2)" oncontextmenu="restar(2)">
+          <p>CAJA2</p>
+        </div>
+        <div class="caja" type="button" id="caja3" onClick="abrirCaja(3)" oncontextmenu="restar(3)">
+          <p>CAJA3</p>
+        </div>
+        <div class="caja" type="button" id="caja4" onClick="abrirCaja(4)" oncontextmenu="restar(4)">
+          <p>CAJA4</p>
+        </div>
       </div>
       <div id="regex">
       <input type="text" id="orden">
-      <input type="button" id="enviar" value="ENVIAR(P)" onclick="validar()">
+      <input type="button" id="enviar" value="ENVIAR" onclick="validar()">
     </div>
       <div id="botonesEstado">
         <input type="button" class="botonEstado" id="guardar" value="GUARDAR" onclick="guardarEstado()"><br>
