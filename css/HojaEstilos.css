@@ -152,6 +152,10 @@
     overflow-y: auto;
     overflow-x:hidden;
     }
+
+    #zonacajas{
+      margin-top: -3%;
+    }
 }
 
 @media screen and (orientation:portrait) {
