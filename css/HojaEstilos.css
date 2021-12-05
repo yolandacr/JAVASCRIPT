@@ -141,4 +141,11 @@
         max-height: 1200px;
     }
 }
+
+@media screen and (max-width: 480px) {
+  #inner {
+    width: 100vw;
+    height: 100vh;
+  }
+}
  
