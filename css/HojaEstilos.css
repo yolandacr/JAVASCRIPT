@@ -193,7 +193,7 @@
 
 #consola{
   margin-top: 10%;
-  height:25%;
+  height:90%;
 }
 
 #orden{
@@ -202,7 +202,6 @@
 
 #zonacajas {
   width:70%;
-  height:55%;
 }
 
 #regex{
