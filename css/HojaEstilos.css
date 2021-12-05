@@ -160,6 +160,10 @@
     #zonacajas{
       margin-top: -3%;
     }
+
+    #container{
+      display:flex;
+    }
 }
 
 @media screen and (orientation:portrait) {
