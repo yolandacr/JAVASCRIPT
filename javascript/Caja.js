@@ -17,6 +17,18 @@ class Caja {
     this.fin = null;
   }
 
+  cambiarColor(){
+       if (this.cola >=1 && this.cola<=3) {
+      this.elemento.style.backgroundColor = "BLUE";
+    } else if (this.cola == 0) {
+      this.elemento.style.backgroundColor = "GREEN";
+    } else if (this.cola == 4) {
+      this.elemento.style.backgroundColor = "RED";
+    } else {
+      this.elemento.style.backgroundColor = "TRANSPARENT";
+    }  
+  }
+
   atender() {
    
 
