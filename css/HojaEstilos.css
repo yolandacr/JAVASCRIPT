@@ -150,7 +150,13 @@
   #botonesEstado {
    height:auto;
    width:20%;
-   font-size:1rem;
+   
+  }
+
+  #zonacajas {
+    width:70%;
+    height:80%;
+    font-size:1rem;
   }
 }
  
