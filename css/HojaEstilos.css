@@ -290,8 +290,8 @@ input:checked + .slider:before {
   }
 
   #consola {
-    margin-top: 10%;
-    height: 90%;
+    
+    height: 15vh;
   }
 
   #orden {
