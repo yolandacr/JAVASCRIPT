@@ -170,6 +170,7 @@ function guardarEstado() {
   //lo guardo en el local localStorage
 
   localStorage.setItem("caja", cajasJSON);
+  console.log("Estado guardado")
 }
 
 function recuperarEstado() {
@@ -177,16 +178,23 @@ function recuperarEstado() {
   if (JSON.parse(localStorage.getItem("caja") == null)) {
     alert("No hay estados guardados");
   } else {
+    console.log("Estado recuperado")
     cajas = JSON.parse(localStorage.getItem("caja"));
 
 
-    //comprueba el estado del array de cajas
-    /* for (let i = 0; i < cajas.length; i++) {
-      console.log(cajas[i]);
-    } */
-    cambiarColor();
-    }
-  }
+   cola1=cajas[0].getCola;
+   cola2=cajas[1].getCola;
+   cola3=cajas[2].getCola;
+   cola4=cajas[3].getCola;
+
+   console.log(cola1);
+  
+        // $("#caja1").css("background-color", "red");
+      }
+    } 
+   
+    
+  
 
 
   function cambiarColor(){
