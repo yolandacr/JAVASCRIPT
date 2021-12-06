@@ -83,11 +83,57 @@
         </label>
       </div>
       <div class="parrafoCentrado" id="central">
-        <img
+
+        <picture>
+          <!-- IMAGEN GRANDE -->
+          <source
+            media="(orientation: landscape) and (min-width: 1201px)"
+            srcset="./imagenes/logosuper.webp"
+            type="image/webp"
+          />
+  
+          <source
+            media="(orientation: portrait) and (min-width:601px)"
+            srcset="./imagenes/logosuper.webp"
+            type="image/webp"
+          />
+  
+          <!-- IMAGEN MEDIANA  -->
+          <source
+            media="(orientation: landscape) and (min-width: 901px)"
+            srcset="./imagenes/logo_mediano.webp"
+            type="image/webp"
+          />
+  
+          <source
+            media="(orientation: portrait) and (min-width:401px)"
+            srcset="./imagenes/logo_mediano.webp"
+            type="image/webp"
+          />
+          <!-- 
+               IMAGEN PEQUEÑA -->
+          <source
+            media="(orientation: landscape) and (max-width: 900px)"
+            srcset="./imagenes/logo_pequeño.webp"
+            type="image/webp"
+          />
+          <source
+            media="(orientation: portrait) and (max-width: 400px)"
+            srcset="./imagenes/logo_pequeño.webp"
+            type="image/webp"
+          />
+  
+          <img
           id="logo"
           alt="Foto de Supermercado"
+          title="Foto base"
           src="./imagenes/logosuper.webp"
         />
+        </picture>
+
+
+
+       
       </div>
       <div class="parrafoCentrado" id="izquierdo"></div>
     </div>
