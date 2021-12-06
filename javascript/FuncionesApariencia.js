@@ -18,6 +18,11 @@ $(".checkbox2").click(function () {
   }
 });
 
+//funcion para abrir los pdfs
+function abrirPdf(direccion) {
+	window.open(direccion);
+}
+
 
 //funcion para que salgan los mensajes de console.log en un div consola.
 
