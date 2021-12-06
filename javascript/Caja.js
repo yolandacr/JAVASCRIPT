@@ -30,7 +30,6 @@ class Caja {
     } else if(this.cola>=0&&this.cola<4){
       this.cola = this.cola + 1;
         this.cambiarColor();
-        console.log(this.cola);
         if(this.cola==4){
           contador = this.contador + 1;
         play("sonidos/colarse.wav");
