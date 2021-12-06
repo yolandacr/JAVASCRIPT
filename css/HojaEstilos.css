@@ -112,7 +112,8 @@ h1 {
 }
 
 #container {
-  height: 60%;
+  height: 100%;
+  width: 100%;
 }
 
 #botonesEstado {
@@ -160,7 +161,7 @@ h1 {
   border-style: solid;
   border-width: 1%;
   width: 85%;
-  height: 25%;
+  height: 15vh;
   margin: auto;
   margin-top: 2%;
   overflow-y: auto;
