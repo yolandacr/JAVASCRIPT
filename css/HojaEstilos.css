@@ -33,8 +33,6 @@
 body {
   background-color: var(--fondoweb);
   height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 p {
