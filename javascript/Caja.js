@@ -1,3 +1,6 @@
+/* ALUMNA:YOLANDA CORDERO ROBLEDO
+CURSO: 2º DAW */
+
 var cuenta = 0; //lo usaremos para estadistica diaria más adelante
 var cola = 0;
 var libre = true;
@@ -17,21 +20,20 @@ class Caja {
     this.fin = null;
   }
 
+  // METODO CUANDO CLICKAMOS EN UNA CAJA
+
   atender() {
-   
-    if (this.libre == true&&this.cuenta==0) {
+    if (this.libre == true && this.cuenta == 0) {
       play("sonidos/mercadona.wav");
       this.libre = false;
       this.cuenta = this.cuenta + 1;
       this.cambiarColor();
       this.inicio = new Date();
-      
-      
-    } else if(this.cola>=0&&this.cola<4){
+    } else if (this.cola >= 0 && this.cola < 4) {
       this.cola = this.cola + 1;
-        this.cambiarColor();
-        if(this.cola==4){
-          contador = this.contador + 1;
+      this.cambiarColor();
+      if (this.cola == 4) {
+        contador = this.contador + 1;
         play("sonidos/colarse.wav");
         this.fin = new Date();
         window.alert(
@@ -39,17 +41,14 @@ class Caja {
             (this.fin - this.inicio) / 1000 +
             " segundos."
         );
-
-        }
-      
-    } else if(this.cola==4){
+      }
+    } else if (this.cola == 4) {
       alert("La cola está llena. Prueba en otra o espera.");
     }
+  }
 
-    
-     
-    }
-  
+
+  // METODO CUANDO HACEMOS CLICK DERECHO
 
   desatender() {
     contador = 0;
@@ -62,19 +61,20 @@ class Caja {
           this.cola +
           " clientes esperando."
       );
-    } else if (this.libre==false&&this.cola<= 0 && this.cuenta==1) {
+    } else if (this.libre == false && this.cola <= 0 && this.cuenta == 1) {
       alert("La caja no tiene clientes");
       this.cuenta = this.cuenta - 1;
       this.libre = true;
       this.cambiarColor();
     } else if (this.cola == 0 && this.cuenta == 0) {
-      
       alert("Caja cerrada");
     }
   }
 
+  //METODO PARA CAMBIAR COLOR DE LAS CAJAS
+
   cambiarColor() {
-    if (this.cola >0 && this.cola <= 3) {
+    if (this.cola > 0 && this.cola <= 3) {
       this.elemento.style.backgroundColor = "BLUE";
     } else if (this.cola == 0 && this.cuenta == 1) {
       this.elemento.style.backgroundColor = "GREEN";

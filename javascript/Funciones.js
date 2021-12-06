@@ -1,3 +1,6 @@
+/* ALUMNA:YOLANDA CORDERO ROBLEDO
+CURSO: 2º DAW */
+
 //crea todas las cajas cuando carga el documento a unos valores por defecto
 function crearCajas() {
   cajas.push(new Caja(document.getElementById("caja1")));
@@ -131,6 +134,8 @@ function validar() {
     console.log(orden + " es un mensaje inválido.");
   }
 
+  //FUNCION PARA PONER MAS BONITO EL MENSAJE QUE MUESTRA CUANDO RESTAMOS
+
   function mensaje(resultado) {
     var lastDigit = resultado.toString().slice(-1);
 
@@ -150,6 +155,8 @@ function validar() {
   }
 }
 
+//FUNCION PARA GUARDAR EL ESTADO EN EL LOCALSTORAGE
+
 function guardarEstado() {
   let cajasJSON = JSON.stringify(cajas);
 
@@ -162,6 +169,7 @@ function guardarEstado() {
   console.log("Estado guardado");
 }
 
+//FUNCION PARA RECUPERAR EL ESTADO DEL LOCALSTORAGE
 function recuperarEstado() {
   var resul = 0;
   if (JSON.parse(localStorage.getItem("caja") == null)) {
@@ -171,7 +179,7 @@ function recuperarEstado() {
     cajasR = JSON.parse(localStorage.getItem("caja"));
 
     var colaR = [];
-    var cuentaR =[];
+    var cuentaR = [];
 
     for (let i = 0; i < cajasR.length; i++) {
       colaR.push(cajasR[i].cola);
