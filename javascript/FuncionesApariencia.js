@@ -1,16 +1,12 @@
-
-    
-    
-
-    $('.checkbox').click(function(){
-        if ($('input.checkbox').is(':checked')) {
-            alert("seleccionado");
-            $(".theme").attr("href", "dark.css");
-        }else{
-            alert("No seleccionado");
-        $(".theme").attr("href", "light.css");
-        }
-        });
+$(document).ready(function () {
+    $(".theme").attr("href", "./css/light.css");
+});
 
 
-
+$(".checkbox").click(function () {
+  if ($("input.checkbox").is(":checked")) {
+    $(".theme").attr("href", "./css/dark.css");
+  } else {
+    $(".theme").attr("href", "./css/light.css");
+  }
+});
