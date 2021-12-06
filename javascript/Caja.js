@@ -50,10 +50,13 @@ class Caja {
 
   desatender() {
     contador = 0;
-    if (this.cola >= 0) {
+    if (this.cola > 0) {
       play("sonidos/caja.mp3");
       this.cola = this.cola - 1;
       this.cambiarColor();
+      console.log(
+        "-1 cliente en cola.La caja  tiene " + this.cola + " clientes esperando."
+      );
     }
 
     if (this.cola == 0) {
@@ -64,11 +67,12 @@ class Caja {
     if (this.cola == -1) {
       alert("Caja cerrada");
       this.cambiarColor();
+      console.log(
+        "La caja no tiene clientes esperando."
+      );
     }
 
-    console.log(
-      "-1 cliente en cola.La caja 1 tiene " + this.cola + " clientes esperando."
-    );
+    
   }
 
   cambiarColor() {
