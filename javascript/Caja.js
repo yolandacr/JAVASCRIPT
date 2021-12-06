@@ -63,7 +63,7 @@ class Caja {
           " clientes esperando."
       );
     } else if (this.libre==false&&this.cola<= 0 && this.cuenta==1) {
-      alert("No hay clientes en cola.");
+      alert("La caja no tiene clientes");
       this.cuenta = this.cuenta - 1;
       this.libre = true;
       this.cambiarColor();
