@@ -1,220 +1,311 @@
 :root {
-    --fondoweb:white;
-    --fondozonaboton: lightblue;
-    --fondozonacajas: lightpink;
-    --fondocajas: red;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background-color: var(--fondoweb); 
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x:hidden;
-  }
-
-  p {
-    font-size: calc(8px + 0.5vw + 0.5vh);
-  }
-
-  h1 {
-    font-size: calc(16px + 0.5vw + 0.5vh);
-    text-align: center;
-  }
-
-  .parrafoCentrado{
-    text-align: center;
-  }
-
-  #zonacabecera {
-    background-color: transparent;
-    text-align: center;
-    margin-bottom:2%;
-  }
-
-  #logo{
-    width: 30%;
-    height:auto;
-  }
-
-  #zonaboton {
-    background-color: var(--fondozonaboton);
-    width: 25%;
-    height: 10vh;
-    margin: 5vh 1vw 5vh 1vw;
-  }
-
-  #zonacajas {
-    background-color: var(--fondozonacajas);
-    width:50%;
-    height: auto;
-    overflow: hidden;
-    margin:auto;
-    text-align: center;
-  }
-
-  .caja {
-    text-align: center;
-    background-color:TRANSparent;
-    border-style: solid;
-    border-width: 1%;
-    border-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    width: 30%;
-    height: auto;
-  }
-
-  #orden{
-    font-size: calc(0.5em + 0.5vw);
-    height:10%;
-    width:40%;
-    margin: 4%;
-  
-  }
-
-  #enviar{
-    font-size: calc(0.5em + 0.5vw);
-    font-weight: bold;
-    height:10%;
-    width:20%;
-    margin:auto;
-  }
-
-  #container{
-    height:60%;
-  }
-
-  #botonesEstado{
-    margin-bottom: 2%;
-    width:100%;
-    text-align: center;
-    
-    
-  }
-
-  .botonEstado{
-    font-size: calc(0.5em + 0.5vw);
-    font-weight: bold;
-    padding: 1%;
-    width:  20%;
-    height: auto;
-  }
-
-  #fondo{
-    position:absolute;
-    width:100vw;
-    height:100vh;
-    top:0px;
-    left:0px;
-    z-index:-1;
-    opacity: 0.6;
-
-  }
-
-  #imagen{
-    
-    position:absolute;
-    object-fit: cover;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    top:0px;
-    left:0px;
-  }
-
-  #regex{
-    text-align: center;
-  }
-
-  #consola{
-    text-align: center;
-    background-color: white;
-    border-color: black;
-    border-style: solid;
-    border-width: 1%;
-    width: 85%;
-    height:25%;
-    margin: auto;
-    margin-top: 2%;
-    overflow-y: auto;
-    overflow-x:hidden;
-    
-  }
-
-  
-
-  @media screen and (orientation:landscape) {
-    #fondo {
-        max-width: 1920px;
-        max-height: 1280px;
-    }
-
-    body{
-    overflow-y: auto;
-    overflow-x:hidden;
-    }
-
-    #zonacajas{
-      margin-top: -3%;
-    }
-
-    #container{
-      display:inline-block;
-    }
+  --fondoweb: white;
+  --fondozonaboton: lightblue;
+  --fondozonacajas: lightpink;
+  --fondocajas: red;
 }
 
-@media screen and (orientation:portrait) {
-    #fondo {
-        max-width: 800px;
-        max-height: 1200px;
-    
+#iconos{
+  color:rgb(216, 216, 30);
+  padding: 5%;
+    margin-top:8%;
 }
 
-
-#enviar{
-  width:50%;
-  margin-right:1%;
+#botonModo{
+  display:inline-block;
+    margin: 20%;
+    height: 100%;
+    width: 100%;
 }
 
-.botonEstado{
-  width:80%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#container{
-  height:25%;
+body {
+  background-color: var(--fondoweb);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-#consola{
-  margin-top: 10%;
-  height:90%;
+p {
+  font-size: calc(8px + 0.5vw + 0.5vh);
 }
 
-#orden{
-  width:60%;
+h1 {
+  font-size: calc(16px + 0.5vw + 0.5vh);
+  text-align: center;
+}
+
+.parrafoCentrado {
+  text-align: center;
+}
+
+#zonacabecera {
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 2%;
+  width: 100%;
+  display: flex;
+  height: 15%;
+}
+
+#logo {
+  width: 50%;
+  height: auto;
+  margin-top:2%;
+  object-fit: cover;
+ 
+}
+
+#zonaboton {
+  background-color: var(--fondozonaboton);
+  width: 25%;
+  height: 10vh;
+  margin: 5vh 1vw 5vh 1vw;
 }
 
 #zonacajas {
-  width:70%;
+  background-color: var(--fondozonacajas);
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
 }
 
-#regex{
-  margin-top: 30%;
+.caja {
+  text-align: center;
+  background-color: TRANSparent;
+  border-style: solid;
+  border-width: 1%;
+  border-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  width: 30%;
+  height: auto;
 }
 
-#botonesEstado{
-  margin-top: 10%;
+#orden {
+  font-size: calc(0.5em + 0.5vw);
+  height: 10%;
+  width: 40%;
+  margin: 4%;
 }
 
-#grupocajas{
-  margin-top:15%;
+#enviar {
+  font-size: calc(0.5em + 0.5vw);
+  font-weight: bold;
+  height: 10%;
+  width: 20%;
+  margin: auto;
 }
 
+#container {
+  height: 60%;
 }
- 
+
+#botonesEstado {
+  margin-bottom: 2%;
+  width: 100%;
+  text-align: center;
+}
+
+.botonEstado {
+  font-size: calc(0.5em + 0.5vw);
+  font-weight: bold;
+  padding: 1%;
+  width: 20%;
+  height: auto;
+}
+
+#fondo {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+#imagen {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+}
+
+#regex {
+  text-align: center;
+}
+
+#consola {
+  text-align: center;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 1%;
+  width: 85%;
+  height: 25%;
+  margin: auto;
+  margin-top: 2%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#izquierdo {
+  width: 25%;
+  background-color:red;
+}
+#central {
+  width: 50%;
+}
+
+#derecho {
+  background-color:blue;
+  width: 25%;
+  
+}
+
+/* BOTON MODO DIA/NOCHE */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
+/* PANTALLAS MOVIL */
+
+@media screen and (orientation: landscape) {
+  #fondo {
+    max-width: 1920px;
+    max-height: 1280px;
+  }
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  #zonacajas {
+    margin-top: -3%;
+  }
+
+  #container {
+    display: inline-block;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #fondo {
+    max-width: 800px;
+    max-height: 1200px;
+  }
+
+  #enviar {
+    width: 50%;
+    margin-right: 1%;
+  }
+
+  .botonEstado {
+    width: 80%;
+  }
+
+  #container {
+    height: 25%;
+  }
+
+  #consola {
+    margin-top: 10%;
+    height: 90%;
+  }
+
+  #orden {
+    width: 60%;
+  }
+
+  #zonacajas {
+    width: 70%;
+  }
+
+  #regex {
+    margin-top: 30%;
+  }
+
+  #botonesEstado {
+    margin-top: 10%;
+  }
+
+  #grupocajas {
+    margin-top: 15%;
+  }
+}

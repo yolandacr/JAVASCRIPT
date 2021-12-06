@@ -1,0 +1,44 @@
+:root {
+  --fondoweb: rgb(8, 8, 8);
+  --fondozonaboton: rgb(5, 45, 58);
+  --fondozonacajas: rgb(228, 40, 68);
+  --fondocajas: red;
+}
+
+body {
+  color: white;
+}
+
+#iconos {
+  color: rgb(246, 249, 252);
+}
+
+.caja {
+  background-color: black;
+
+  border-color: white;
+}
+
+#orden {
+  background-color: black;
+  color: white;
+}
+
+#enviar {
+  color: white;
+  background-color: black;
+}
+
+.botonEstado {
+  background-color: black;
+  color: white;
+}
+
+#fondo {
+  opacity: 0.2;
+}
+
+#consola {
+  background-color: black;
+  border-color: white;
+}

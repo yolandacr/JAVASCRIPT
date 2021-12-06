@@ -8,127 +8,184 @@
   <head>
     <title>Ejercicios Javascript</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/HojaEstilos.css" />
+    <link rel="stylesheet" href="./css/light.css" class="theme" />
+    <link rel="stylesheet" href="./css/dark.css" class="theme" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
   </head>
 
   <body onload="crearCajas()">
     <div id="fondo">
       <picture>
+        <!-- IMAGEN GRANDE -->
+        <source
+          media="(orientation: landscape) and (min-width: 1201px)"
+          srcset="./imagenes/grande.webp"
+          type="image/webp"
+        />
 
-         <!-- IMAGEN GRANDE -->
-        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./imagenes/grande.webp"
-            type="image/webp">
+        <source
+          media="(orientation: portrait) and (min-width:601px)"
+          srcset="./imagenes/grande_vertical.jpg"
+          type="image/jpg"
+        />
 
-            <source media="(orientation: portrait) and (min-width:601px)" srcset="./imagenes/grande_vertical.jpg" type="image/jpg">
+        <!-- IMAGEN MEDIANA  -->
+        <source
+          media="(orientation: landscape) and (min-width: 901px)"
+          srcset="./imagenes/mediana.webp"
+          type="image/webp"
+        />
 
-            <!-- IMAGEN MEDIANA  -->
-            <source media="(orientation: landscape) and (min-width: 901px)" srcset="./imagenes/mediana.webp"
-            type="image/webp">
-
-            <source media="(orientation: portrait) and (min-width:401px)" srcset="./imagenes/mediana_vertical.jpg" type="image/jpg">
-<!-- 
+        <source
+          media="(orientation: portrait) and (min-width:401px)"
+          srcset="./imagenes/mediana_vertical.jpg"
+          type="image/jpg"
+        />
+        <!-- 
              IMAGEN PEQUEÑA -->
-            <source media="(orientation: landscape) and (max-width: 900px)" srcset="./imagenes/pequeña.jpg" type="image/jpg">
-            <source media="(orientation: portrait) and (max-width: 400px)" srcset="./imagenes/pequeña_vertical.webp" type="image/webp">
+        <source
+          media="(orientation: landscape) and (max-width: 900px)"
+          srcset="./imagenes/pequeña.jpg"
+          type="image/jpg"
+        />
+        <source
+          media="(orientation: portrait) and (max-width: 400px)"
+          srcset="./imagenes/pequeña_vertical.webp"
+          type="image/webp"
+        />
 
-            <img id="imagen" alt="Foto de Supermercado" title="supermercado" src="./imagenes/grande.webp" />
-
-
+        <img
+          id="imagen"
+          alt="Foto de Supermercado"
+          title="supermercado"
+          src="./imagenes/grande.webp"
+        />
       </picture>
-      
     </div>
     <div id="zonacabecera">
-      
-
-
-           <img id="logo" alt="Foto de Supermercado" src="./imagenes/logosuper.webp" />
-
-
-     
+      <div class="parrafoCentrado" id="derecho">
+        <label class="switch">
+          <input type="checkbox" class="checkbox" />
+          <span class="slider round" id="botonModo">
+            <i id="iconos" class="fas fa-moon"></i>
+            <i id="iconos" class="fas fa-sun"></i>
+          </span>
+        </label>
+      </div>
+      <div class="parrafoCentrado" id="central">
+        <img
+          id="logo"
+          alt="Foto de Supermercado"
+          src="./imagenes/logosuper.webp"
+        />
+      </div>
+      <div class="parrafoCentrado" id="izquierdo"></div>
     </div>
     <br />
     <div id="container">
-    <div id="zonacajas">
-      <div id="grupocajas">
-        <div class="caja" type="button" id="caja1" onClick="abrirCaja(1)" oncontextmenu="restar(1)">
-          <p>CAJA1</p>
+      <div id="zonacajas">
+        <div id="grupocajas">
+          <div
+            class="caja"
+            type="button"
+            id="caja1"
+            onClick="abrirCaja(1)"
+            oncontextmenu="restar(1)"
+          >
+            <p>CAJA1</p>
+          </div>
+          <div
+            class="caja"
+            type="button"
+            id="caja2"
+            onClick="abrirCaja(2)"
+            oncontextmenu="restar(2)"
+          >
+            <p>CAJA2</p>
+          </div>
+          <div
+            class="caja"
+            type="button"
+            id="caja3"
+            onClick="abrirCaja(3)"
+            oncontextmenu="restar(3)"
+          >
+            <p>CAJA3</p>
+          </div>
+          <div
+            class="caja"
+            type="button"
+            id="caja4"
+            onClick="abrirCaja(4)"
+            oncontextmenu="restar(4)"
+          >
+            <p>CAJA4</p>
+          </div>
         </div>
-        <div class="caja" type="button" id="caja2" onClick="abrirCaja(2)" oncontextmenu="restar(2)">
-          <p>CAJA2</p>
+        <div id="regex">
+          <input type="text" id="orden" />
+          <input type="button" id="enviar" value="ENVIAR" onclick="validar()" />
         </div>
-        <div class="caja" type="button" id="caja3" onClick="abrirCaja(3)" oncontextmenu="restar(3)">
-          <p>CAJA3</p>
-        </div>
-        <div class="caja" type="button" id="caja4" onClick="abrirCaja(4)" oncontextmenu="restar(4)">
-          <p>CAJA4</p>
+        <div id="botonesEstado">
+          <input
+            type="button"
+            class="botonEstado"
+            id="guardar"
+            value="GUARDAR"
+            onclick="guardarEstado()"
+          /><br />
+          <input
+            type="button"
+            class="botonEstado"
+            id="recuperar"
+            value="RECUPERAR"
+            onclick="recuperarEstado()"
+          />
         </div>
       </div>
-      <div id="regex">
-      <input type="text" id="orden">
-      <input type="button" id="enviar" value="ENVIAR" onclick="validar()">
-    </div>
-      <div id="botonesEstado">
-        <input type="button" class="botonEstado" id="guardar" value="GUARDAR" onclick="guardarEstado()"><br>
-      <input type="button" class="botonEstado" id="recuperar" value="RECUPERAR" onclick="recuperarEstado()">
+      <div id="consola">
+        Este espacio será para el console log. Este espacio será para el console
+        log. Este espacio será para el console log. Este espacio será para el
+        console log. Este espacio será para el console log. Este espacio será
+        para el console log. Este espacio será para el console log. Este espacio
+        será para el console log. Este espacio será para el console log. Este
+        espacio será para el console log. Este espacio será para el console log.
+        Este espacio será para el console log.Este espacio será para el console
+        log. Este espacio será para el console log. Este espacio será para el
+        console log. Este espacio será para el console log. Este espacio será
+        para el console log. Este espacio será para el console log.Este espacio
+        será para el console log. Este espacio será para el console log. Este
+        espacio será para el console log. Este espacio será para el console log.
+        Este espacio será para el console log. Este espacio será para el console
+        log.Este espacio será para el console log. Este espacio será para el
+        console log. Este espacio será para el console log. Este espacio será
+        para el console log. Este espacio será para el console log. Este espacio
+        será para el console log.Este espacio será para el console log. Este
+        espacio será para el console log. Este espacio será para el console log.
+        Este espacio será para el console log. Este espacio será para el console
+        log. Este espacio será para el console log.Este espacio será para el
+        console log. Este espacio será para el console log. Este espacio será
+        para el console log. Este espacio será para el console log. Este espacio
+        será para el console log. Este espacio será para el console log.Este
+        espacio será para el console log. Este espacio será para el console log.
+        Este espacio será para el console log. Este espacio será para el console
+        log. Este espacio será para el console log. Este espacio será para el
+        console log.Este espacio será para el console log. Este espacio será
+        para el console log. Este espacio será para el console log. Este espacio
+        será para el console log. Este espacio será para el console log. Este
+        espacio será para el console log.Este espacio será para el console log.
       </div>
-      
     </div>
-    <div id=consola>
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.
-      Este espacio será para el console log.Este espacio será para el console log.
-      
-    </div>
-  </div>
     <script src="./javascript/Caja.js"></script>
     <script src="./javascript/Funciones.js"></script>
-  
+    <script src="./javascript/FuncionesApariencia.js"></script>
   </body>
 </html>

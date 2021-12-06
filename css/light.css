@@ -1,0 +1,24 @@
+#iconos {
+  color: rgb(216, 216, 30);
+}
+#botonModo {
+  display: inline-block;
+}
+
+p {
+  font-size: calc(8px + 0.5vw + 0.5vh);
+}
+
+h1 {
+  font-size: calc(16px + 0.5vw + 0.5vh);
+  text-align: center;
+}
+
+.caja {
+  border-color: white;
+}
+
+#consola {
+  background-color: white;
+  border-color: black;
+}
