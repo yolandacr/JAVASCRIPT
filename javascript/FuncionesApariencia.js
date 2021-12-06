@@ -10,16 +10,10 @@ $(".checkbox").click(function () {
   }
 });
 
-
-$(".checkbox2").click(function(){
+$(".checkbox2").click(function () {
   if ($("input.checkbox2").is(":checked")) {
-    alert("seleccionado");
-    $('#fondo').css('opacity', '0');
-    }
-  else{
-    alert(" no seleccionado");
-    $('#fondo').css('opacity', '0.6');
-    
-}
+    $("#fondo").css("opacity", "0");
+  } else {
+    $("#fondo").css("opacity", "0.6");
+  }
 });
-
